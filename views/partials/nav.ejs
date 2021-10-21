@@ -1,7 +1,9 @@
 
 <% if(currentUser) {%>
   <h3> Wellcome back <%=currentUser.username%></h3>
-  <a href="">logout</a>
+  <form  action="/sessions?_method=DELETE" method="POST">
+    <input type="submit" value="logout">
+  </form>
 <%} else if(!currentUser) {%>
   <a href="/sessions/new">Login</a>
   <a href="/users/new">Sign up</a>

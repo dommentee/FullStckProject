@@ -33,5 +33,7 @@ sessions.post('/', (req, res) => {
     }
   })
 })
+//route to delete seeesion /log out 
+
 
 module.exports = sessions
