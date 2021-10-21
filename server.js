@@ -45,6 +45,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 //use public folder for static assets
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
@@ -64,6 +65,13 @@ app.get('/', (req, res) => {
   )
   // res.send('Hello World!');
 });
+//controllers
+
+const usersController = require('./controllers/user_controller.js');
+// const sessionsController = require('./controllers/session_controller.js');
+app.use('/users', usersController)
+// app.use('/sesions',sessionsController)
+
 
 //___________________
 //Listener
