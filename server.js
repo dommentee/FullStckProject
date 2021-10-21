@@ -13,6 +13,16 @@ require('dotenv').config()
 // Allow use of Heroku's port or your own local port, depending on the environment
 const PORT = process.env.PORT || 3003;
 
+//users to be able to create a profile
+//users can upload their art and usersers can set a price 
+//store will have all arts for sale 
+//users can browse withwout having to be logged in
+
+//create home page and user signup/login 
+//set up rotes and dynamic headers with css file 
+
+
+
 //___________________
 //Database
 //___________________
@@ -48,8 +58,11 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 //localhost:3000
-app.get('/' , (req, res) => {
-  res.send('Hello World!');
+app.get('/', (req, res) => {
+  res.render(
+    'home.ejs',
+  )
+  // res.send('Hello World!');
 });
 
 //___________________
