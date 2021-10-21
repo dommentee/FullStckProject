@@ -1,5 +1,12 @@
-<a href="/">home</a>
-<div class="login_logout">
-  <a href="/users/new">sign up</a>
-  <a href="/sessions/new">login</a>
-</div>
+
+<% if(currentUser) {%>
+  <h3> Wellcome back <%=currentUser.username%></h3>
+  <a href="">logout</a>
+<%} else if(!currentUser) {%>
+  <a href="/sessions/new">Login</a>
+  <a href="/users/new">Sign up</a>
+<%}%>
+
+
+
+
