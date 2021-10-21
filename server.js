@@ -70,7 +70,7 @@ app.get('/', (req, res) => {
 const usersController = require('./controllers/user_controller.js');
 const sessionsController = require('./controllers/session_controller.js');
 app.use('/users', usersController)
-// app.use('/sesions',sessionsController)
+app.use('/sessions', sessionsController)
 
 
 //___________________
