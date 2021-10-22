@@ -11,13 +11,15 @@ const isAuth = (req, res, next) => {
     res.redirect('/sessions/new')
   }
 }
+
+//create
 arts.post('/', (req, res) => {
   Arts.create(req.body, (error, uploadedWork) => {
     res.redirect('/arts')
   })
 })
 
-
+//findall
 arts.get('/', (req, res) => {
   Arts.find({}, (error, allUploads) => {
     res.render(
@@ -31,6 +33,20 @@ arts.get('/', (req, res) => {
   })
 })
 
+//finding each uploaded art by id
+arts.get('/:id', (req, res) => {
+  Arts.findById(req.params.id, (error, foundUpload) => {
+    res.render(
+      'show_art.ejs',
+      {
+        upload: foundUpload,
+        currentUser: req.session.currentUser 
+      }
+    )
+  })
+})
+
+//form for new creattion
 arts.get('/new', (req, res) => {
   res.render(
     'new_art.ejs',
@@ -38,6 +54,7 @@ arts.get('/new', (req, res) => {
   )
 })
 
+//show selected
 
 
 
