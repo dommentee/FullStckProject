@@ -46,6 +46,14 @@ arts.get('/', (req, res) => {
   })
 })
 
+//form for new creattion
+arts.get('/new', (req, res) => {
+  res.render(
+    'new_art.ejs',
+    { currentUser: req.session.currentUser }
+  )
+})
+
 //finding each uploaded art by id
 arts.get('/:id', (req, res) => {
   Arts.findById(req.params.id, (error, foundUpload) => {
@@ -57,14 +65,6 @@ arts.get('/:id', (req, res) => {
       }
     )
   })
-})
-
-//form for new creattion
-arts.get('/new', (req, res) => {
-  res.render(
-    'new_art.ejs',
-    { currentUser: req.session.currentUser }
-  )
 })
 
 //edit upload
