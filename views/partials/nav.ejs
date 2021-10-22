@@ -4,8 +4,9 @@
   <form  action="/sessions?_method=DELETE" method="POST">
     <input type="submit" value="logout">
   </form>
-<%} else if(!currentUser) {%>
 
+<%} else if(!currentUser) {%>
+  
   <a href="/sessions/new">Login</a>
   <a href="/users/new">Sign up</a>
   
