@@ -25,6 +25,13 @@ arts.put('/:id', (req, res) => {
   })
 })
 
+//delete 
+arts.delete('/:id', (req, res) => {
+  Arts.findByIdAndRemove(req.params.id, (error, uploadToDelete) => {
+    res.redirect('/arts')
+  })
+})
+
 //find all
 arts.get('/', (req, res) => {
   Arts.find({}, (error, allUploads) => {
