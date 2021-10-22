@@ -5,8 +5,11 @@
     <input type="submit" value="logout">
   </form>
 <%} else if(!currentUser) {%>
+  <a href="/arts/new">upload</a>
+
   <a href="/sessions/new">Login</a>
   <a href="/users/new">Sign up</a>
+  
 <%}%>
 
 

@@ -10,5 +10,16 @@
     <%- include ('./partials/nav.ejs') %>
   </na>
   <h1>index page</h1>
+  <% for(let i = 0; i < uploads.length; i++) {%>
+    <div class="upload">
+      <a  href="/arts/<%=uploads[i].id%>">
+        <img src="<%=uploads[i].img%>"/>
+      <div class="info">
+        <div class=title><%=uploads[i].title%></div>
+        <div class=tags>tags: <%=uploads[i].tags%></div>
+      </div>
+    </a>  
+    </div>
+  <%}%>
 </body>
 </html>
