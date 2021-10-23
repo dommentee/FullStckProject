@@ -44,7 +44,7 @@ body {
 }
 .intro {
   background-color: cadetblue;
-  padding: 6% 3%;
+  padding: 5% 3%;
 
 }
 #one {
@@ -66,8 +66,15 @@ body {
   background: -webkit-linear-gradient(top, #666666, #4F4F4F);
   background: -moz-linear-gradient(top, #666666, #4F4F4F);
   background-color: #666666;
-  text-align: center;
   color: #55F5AF; 
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#last_intro {
+  font-weight: 600;
+  font-size: 1.6em;
 }
 /*end of main */
 .titles {
@@ -77,5 +84,5 @@ body {
 .intro_text {
   font-size: 1.3em;
   margin: 6% 0; 
-  font-weight: 500;
+  font-weight: 400;
 }
