@@ -6,18 +6,27 @@
 </head>
 <body>
   <nav>
-    <a href="/">home</a>
-    <a href="/sessions/new">log in</a>
+    <a class="nav_link" href="/">home</a>
   </nav>
-  <h1>sign up</h1>
-  <form action="/users" method="POST">
-    <label for="name">User Name:</label>
-    <input type="text" name="username" required/>
-    <br>
-    <label for="color">Password:</label>
-    <input type="password" name="password" />
-    <br>
-    <input type="submit" value="Submit">
-  <form>
+
+  <div class="formwrap">
+    <h1>United We Art</h1>
+    <h2>sign up</h2>
+    <span class="ua-experience">Created for creators.</span>
+    <form action="/users" method="POST">
+      <label for="name">User Name:</label>
+      <input type="text" name="username" placeholder="user name" required />
+      <br>
+      <label for="color">Password:</label>
+      <input type="password" name="password" placeholder="password" />
+      <br>
+      <input type="submit" value="Submit">  
+      <div class="submit_wrap">
+       Allready a member?
+        <a class="nav_link" href="/sessions/new">Login</a>
+
+      </div>
+    <form>
+  </div>
 </body>
 </html>
