@@ -5,12 +5,13 @@
   <title>Show the world</title>
 </head>
 <body>
-  <na>
-    <a href="/">home</a>
+  <nav>
+    <a href="/arts">Explore</a>
     <%- include ('./partials/nav.ejs') %>
-  </na>
-  <div class="container">
-    <h1>add images</h1>
+  </nav>
+  <div class="formwrap">
+    <h1>Upload your work</h1>
+    <span class="ua-experience">Created for creators.</span>
     <form action="/arts" method="POST">
       <label for="tiltle">Title</label>
       <input  name="title" type="input">
@@ -25,7 +26,23 @@
       <label for="seeking">Seeking</label>
       <input type="string" name="seeking">
       <input type=submit value="excite the world">
-    </form>
+    <form>
   </div>
+    <!-- <form action="/arts" method="POST">
+      <label for="tiltle">Title</label>
+      <input  name="title" type="input">
+      <label for="description">Description</label>
+      <input  name="description" type="input">
+      <label for="tags">Tags</label>
+      <input name="tags" type="input">  
+      <label for="img">image</label>
+      <input name="img" type="text">
+      <label for="collaborate">Collab</label>
+      <input name="collaborate" type="checkbox">
+      <label for="seeking">Seeking</label>
+      <input type="string" name="seeking">
+      <input type=submit value="excite the world">
+    </form>
+  </div> -->
 </body>
 </html>

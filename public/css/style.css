@@ -12,8 +12,15 @@ body {
 	background: -webkit-linear-gradient( #fcfafa, #fcfbfb);
   background-color: #EDEDED;
 }
+
 .clear-fix {
 	clear: both;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  padding: 2% 7%;
 }
 
 .main {
@@ -38,15 +45,14 @@ body {
 .nav_link {
   text-decoration: none;
   display: inline-block;
-  border-radius: 10px;
+  color:#202D85;
+  border: 2px solid;
   width: 20%;
-  padding: 10px 15px;
+  text-align: center;
+  padding: 6px 15px;
   font-weight: 500;
-  color: #3D3D3D;
   background: -webkit-linear-gradient( #fcfafa71, #fcfbfb85);
   background-color: #ededed69;
- 
-
 }
 #link_left {
   background: -webkit-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
@@ -57,6 +63,7 @@ body {
   color:#202D85;
 }
 .container {
+  width: 100%;
   display: flex;
   align-content: center;
   overflow: hidden;
@@ -68,7 +75,6 @@ body {
   left: 0;
 }
 .intro {
-  background-color: cadetblue;
   padding: 5% 3%;
 
 }
@@ -110,4 +116,59 @@ body {
   font-size: 1.3em;
   margin: 6% 0; 
   font-weight: 400;
+}
+
+.formwrap {
+  width: 40%;
+  padding: 3%;
+  border: 2px solid #202D85; 
+  margin: 0 auto
+}
+
+input {
+  width: 100%;
+  padding: 13px 8px;
+  margin: 15px 0 9px 0;
+  font-size: .8em;
+  border: .5px solid #3D3D3D;
+  box-sizing: border-box;
+}
+
+.nav_link:hover {
+  background-color: #FF2A59;
+  cursor: pointer;
+}
+#log_out {
+
+}
+
+/* mobile styling */
+@media screen and (max-width: 1024px) {
+  .overlayer {
+
+  }
+}
+
+@media only screen and (max-width: 823px) {
+  .overlayer {
+
+  }
+}
+@media screen and (max-width: 768px) {
+  .overlayer {
+
+  }
+}
+
+@media screen and (max-width: 640px) { 
+  .overlayer {
+
+  }
+  .container {
+    display: inline-block;
+  }
+  .intro {
+    width: 100%;
+  }
+
 }
