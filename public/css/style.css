@@ -71,9 +71,19 @@ nav {
 }
 .home_nav {
   width: 100%;
-  font-size: 2.3em;
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: 400;
   text-align: center;
   align-self: end;
+}
+.home_nav_link {
+  width: 20%;
+  padding: 8px 0;
+  text-align: center;
+  display: inline-block;
+  color: #3a3a3a;
+
 }
 .nav_link {
   text-decoration: none;
@@ -88,12 +98,16 @@ nav {
   background-color: #ededed69;
 }
 #link_left {
-  background: -webkit-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
-  background: -moz-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
-
+  color: #202D85;
+  border:  2px solid ;
+  background : -webkit-linear-gradient( #fcfafa71, #fcfbfb85) ;
+  background-color: #ededed69;
 }
 #link_right {
-  color:#202D85;
+  color: #fcfafa;;
+  border: 2px solid#202D85;
+  background-color: #202D85;
+ 
 }
 .container {
   width: 100%;
