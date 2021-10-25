@@ -16,11 +16,16 @@
         <div class="upload">
           <a  href="/arts/<%=uploads[i].id%>">
             <img src="<%=uploads[i].img%>"/>
+          </a> 
           <div class="info">
+            <form class="like_form" method="POST">
+              <i class="far fa-heart">
+                <input type="submit" value="Like" class="like_button" />
+              </i>
+            </form>
             <div class=title><%=uploads[i].title%></div>
             <div class=tags>tags: <%=uploads[i].tags%></div>
-          </div>
-        </a>  
+          </div> 
         </div>
       <%}%>
 
