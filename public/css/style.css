@@ -320,6 +320,17 @@ h4 {
   width: fit-content;
   padding: 5px 10px
 }
+.edit_upload {
+  margin: 10px 0;
+
+}
+.edit_button {
+  padding: 5px 10px;
+  width: fit-content;
+  text-align: center;
+  color:rgb(201, 202, 204);
+  background-color: #202D85;
+}
 
 
 

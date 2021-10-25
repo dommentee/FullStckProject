@@ -5,12 +5,13 @@
   <title>Document</title>
 </head>
 <body>
-  <nav>
-    <a href="/">home</a>
-  </nav>
-
-  <div class="container">
-    <h1>add images</h1>
+  <div class="index_nav">
+    <a class="upload_link" href="/arts">Archive</a>
+    <%- include ('./partials/nav.ejs') %>
+  </div>
+   
+  <div class="formwrap">
+    <h1>Edit your content</h1>
     <form action="/arts/<%=upload.id%>?_method=PUT" method="POST">
       <label for="tiltle">Title</label>
       <input  name="title" type="input" value="<%=upload.title%>">
