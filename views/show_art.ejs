@@ -5,10 +5,30 @@
   <title>Document</title>
 </head>
 <body>
-  <nav>
-    <a href="/">home</a>
-  </nav>
-    <h1><%=upload.title%></h1>
+  <div class="index_nav">
+    <a class="upload_link" href="/arts/">Archive</a>
+  </div>
+  <div class="show_container">
+  </div>
+  <div class="upload">
+    <div class="upload_img">
+      <img src="<%=upload.img%>"class="pic"/>
+    </div>
+    <div class="upload_info">
+      <h3><%=upload.title%></h3>
+      <div class="info" id="description"><%=upload.description%></div>
+        <form method="POST">
+          <input type="submit" value="Like" class="button" />
+        </form>
+        <form method="POST">
+          <input type="textarea" name="comment" placeholder="comment">
+          <input type="submit" value="submit" class="button" />
+        </form>
+
+    </div>
+    <!-- <a href="/product/edit">edit product</a> -->
+  </div>
+    
     <div class="edit_upload">
       <a href="/arts/<%=upload.id%>/edit">edit upload</a>
     </div>
