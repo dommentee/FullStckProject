@@ -1,14 +1,17 @@
 
 <% if(currentUser) {%>
-  <form  action="/sessions?_method=DELETE" method="POST">
-    <h3> Wellcome back <%=currentUser.username%></h3>
-    <input class="nav_link" id="log_out" type="submit" value="logout">
-  </form>
+  <div class="right_nav">  
+    <span class="greet_user">sup! <%=currentUser.username%></span>
+    <form class="logout"  action="/sessions?_method=DELETE" method="POST">
+      <input id="log_out" type="submit" value="logout">
+    </form>
+  </div>
 
 <%} else if(!currentUser) {%>
   
-  <a href="/sessions/new">Login</a>
-  <a href="/users/new">Sign up</a>
+  <div class="no_user"> </div>
+  <a class="nav_link" href="/sessions/new">Login</a>
+  <a class="nav_link" href="/users/new">Sign up</a>
   
 <%}%>
 

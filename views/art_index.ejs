@@ -5,27 +5,26 @@
   <title>Galary</title>
 </head>
 <body>
-  <div class="index_container"> 
-    <na>
-      <%- include ('./partials/nav.ejs') %>
-      <a href="#">profile</a>
-      <a class="nav_link" href="/arts">upload</a>
-    </na>
-    
-    <h1>index page</h1>
-
-    <% for(let i = 0; i < uploads.length; i++) {%>
-      <div class="upload">
-        <a  href="/arts/<%=uploads[i].id%>">
-          <img src="<%=uploads[i].img%>"/>
-        <div class="info">
-          <div class=title><%=uploads[i].title%></div>
-          <div class=tags>tags: <%=uploads[i].tags%></div>
+  <div class="index_nav">
+    <a class="upload_link" href="/arts/new">upload</a>
+    <%- include ('./partials/nav.ejs') %>
+  </div>
+  <h1 class="index_h1">Archive</h1>
+  <div class="upload_container"> 
+    <div class="upload_wrap">
+      <% for(let i = 0; i < uploads.length; i++) {%>
+        <div class="upload">
+          <a  href="/arts/<%=uploads[i].id%>">
+            <img src="<%=uploads[i].img%>"/>
+          <div class="info">
+            <div class=title><%=uploads[i].title%></div>
+            <div class=tags>tags: <%=uploads[i].tags%></div>
+          </div>
+        </a>  
         </div>
-      </a>  
-      </div>
-    <%}%>
+      <%}%>
 
+    </div>
   </div>
 </body>
 </html>

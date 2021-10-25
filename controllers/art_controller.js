@@ -47,7 +47,7 @@ arts.get('/', (req, res) => {
 })
 
 //form for new creattion
-arts.get('/new', (req, res) => {
+arts.get('/new', isAuth, (req, res) => {
   res.render(
     'new_art.ejs',
     { currentUser: req.session.currentUser }
