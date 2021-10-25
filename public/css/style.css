@@ -175,7 +175,11 @@ input {
 
 }
 .upload_container {
+  background-color: #FF2A59;
+  width: 100%;
+  display: inline-block;
   padding: 5% 3%;
+  
 
 }
 .index_h1 {
@@ -183,10 +187,11 @@ input {
 }
 
 .upload_wrap {
-  display:  inline-flex;
+  width: 100%;
+  display:  flex;
   flex-wrap: wrap;
   gap: 2.3%;
-  float: left;
+  float: left; 
 
 }
 .upload {
