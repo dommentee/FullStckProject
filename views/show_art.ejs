@@ -7,6 +7,7 @@
 <body>
   <div class="index_nav">
     <a class="upload_link" href="/arts/">Archive</a>
+    <%- include ('./partials/nav.ejs') %>
   </div>
   <div class="show_container">
     <div class="show_upload">
@@ -17,12 +18,22 @@
         <span class="upload_title"><%=upload.title%></span>
         <h4>About my work:</h4>
         <div id="description"><%=upload.description%></div>
-        <form method="POST" class="comment_form">
+        <form action="/arts/<%=upload.id%>/comment" class="comment_form" method="POST">
+          <% if(currentUser) {%> 
+            <input class="comment-id" type="text" value="<%=currentUser.username%>">
+          <%}%>
           <textarea name="comment" placeholder="comment" class="comment_textarea" rows="5" cols="40"></textarea> 
           <input type="submit" value="submit" class="sub_comment"/>
         </form>
         <div class="comments_wrap">
-         
+          <ul>
+            <% for(let i = 0; i < upload.comment.length; i++) {%>
+              <li>
+                <%=upload.comment[i]%><
+                <%=upload.comment[i]%>
+              </li>
+            <%}%>
+          </ul>
         </div>
         <div class="edit_upload">
           <a class="edit_button" href="/arts/<%=upload.id%>/edit">edit upload</a>
