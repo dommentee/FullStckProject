@@ -337,7 +337,9 @@ ul {
   overflow-y: scroll;
 }
 
-
+.edit_upload {
+  margin-top: 20%;
+}
 .edit_button {
   padding: 5px 10px;
   width: fit-content;
