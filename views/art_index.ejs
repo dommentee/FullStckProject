@@ -18,10 +18,12 @@
             <img src="<%=uploads[i].img%>"/>
           </a> 
           <div class="info">
-            <form class="like_form" method="POST">
-              <i class="far fa-heart">
+            <%=uploads[i].numberOfLikes%>
+            <form class="like_form"  action="/arts/<%=uploads[i].id%>/numberOfLikes?_method=PUT" method="POST">
+              <!-- <i class="far fa-heart">
                 <input type="submit" value="Like" class="like_button" />
-              </i>
+              </i> -->
+                <button type="submit" class="like_button"><i class="far fa-heart"></i></button>
             </form>
             <div class=title><%=uploads[i].title%></div>
             <div class=tags>tags: <%=uploads[i].tags%></div>

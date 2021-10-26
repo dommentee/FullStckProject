@@ -33,9 +33,11 @@
             <%}%>
           </ul>
         </div>
-        <div class="edit_upload">
-          <a class="edit_button" href="/arts/<%=upload.id%>/edit">edit upload</a>
-        </div>
+        <% if(currentUser._id === upload.post_user) {%>
+          <div class="edit_upload">
+            <a class="edit_button" href="/arts/<%=upload.id%>/edit">edit upload</a>
+          </div>
+        <%}%>
       </div>
     </div>
   </div>

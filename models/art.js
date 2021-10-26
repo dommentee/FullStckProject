@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const artSchema = new Schema(
   {
+    post_user: {type: String},
     title: { type: String },
     description: { type: String },
     tags: [String],

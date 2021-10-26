@@ -11,6 +11,13 @@ const isAuth = (req, res, next) => {
     res.redirect('/sessions/new')
   }
 }
+// const editAuth = (req, res, next) => {
+//   if (req.session.currentUser._id === upload.post_user) {
+//     return next();
+//   } else {
+//     res.send('not authorrized')
+//   }
+// }
 
 //create
 arts.post('/', isAuth,(req, res) => {
@@ -21,6 +28,12 @@ arts.post('/', isAuth,(req, res) => {
 //update
 arts.put('/:id',isAuth,(req, res) => {
   Arts.findByIdAndUpdate(req.params.id, req.body, (error, uploadToUpdate) => {
+    res.redirect('/arts')
+  })
+})
+//to add likes 
+arts.put('/:id/numberOfLikes', (req, res) => {
+  Arts.findByIdAndUpdate(req.params.id,{$inc: {numberOfLikes: +1 }}, (error, likedUpload) => {
     res.redirect('/arts')
   })
 })

@@ -2,6 +2,7 @@
 <% if(currentUser) {%>
   <div class="right_nav">  
     <span class="greet_user">sup! <%=currentUser.username%></span>
+    <!-- <a href="/users/<%currentUser.id%>/profile">profile</a> -->
     <form class="logout"  action="/sessions?_method=DELETE" method="POST">
       <input id="log_out" type="submit" value="logout">
     </form>
