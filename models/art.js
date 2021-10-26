@@ -9,10 +9,16 @@ const artSchema = new Schema(
     img: String,
     collaborate: Boolean,
     seeking: [String],
-    comment: [],
+    comments: [
+      {
+        comment: [String],
+        sender: String
+      }
+    ],
     like: Boolean,
     numberOfLikes: Number
   },
+
   {
     timestamps: true
   }

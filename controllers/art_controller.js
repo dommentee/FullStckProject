@@ -25,8 +25,8 @@ arts.put('/:id',isAuth,(req, res) => {
   })
 })
 //edit datase to add comment
-arts.post('/:id/comment',isAuth, (req, res) => {
-  Arts.findByIdAndUpdate(req.params.id, { $push: { comment: req.body.comment} }, (error, updatedComment) => {
+arts.post('/:id/comments',isAuth, (req, res) => {
+  Arts.findByIdAndUpdate(req.params.id, { $push: { comments: req.body.comments, sender: req.body.sender }}, (error, updatedComment) => {
     res.redirect(`/arts/${req.params.id}`)
   })
 })

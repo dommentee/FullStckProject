@@ -18,19 +18,17 @@
         <span class="upload_title"><%=upload.title%></span>
         <h4>About my work:</h4>
         <div id="description"><%=upload.description%></div>
-        <form action="/arts/<%=upload.id%>/comment" class="comment_form" method="POST">
-          <% if(currentUser) {%> 
-            <input class="comment-id" type="text" value="<%=currentUser.username%>">
-          <%}%>
-          <textarea name="comment" placeholder="comment" class="comment_textarea" rows="5" cols="40"></textarea> 
+        <form action="/arts/<%=upload.id%>/comments" class="comment_form" method="POST">
+          <input name="comments[][sender]" class="comment-id" type="text" value="<%=currentUser.username%>">
+          <textarea name="comments[][comment]" placeholder="comment" class="comment_textarea" rows="5" cols="40"></textarea> 
           <input type="submit" value="submit" class="sub_comment"/>
         </form>
         <div class="comments_wrap">
           <ul>
-            <% for(let i = 0; i < upload.comment.length; i++) {%>
+            <% for(let i = 0; i < upload.comments.length; i++) {%>
               <li>
-                <%=upload.comment[i]%><
-                <%=upload.comment[i]%>
+                <%=upload.comments[i].sender%>: 
+                <%=upload.comments[i].comment%>
               </li>
             <%}%>
           </ul>
