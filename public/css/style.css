@@ -306,6 +306,9 @@ h4 {
 .like_button {
   display: none;
 }
+ul {
+  list-style: none;
+}
 .comment_form {
   margin-top: 50px;
   padding: 5px;
@@ -326,6 +329,15 @@ h4 {
 .edit_upload {
   margin: 10px 0;
 }
+
+.comments_wrap {
+  height: 100px;
+  border: 1px solid;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+
 .edit_button {
   padding: 5px 10px;
   width: fit-content;
