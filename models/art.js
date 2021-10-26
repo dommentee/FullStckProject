@@ -8,7 +8,10 @@ const artSchema = new Schema(
     tags: [String],
     img: String,
     collaborate: Boolean,
-    seeking: [String]
+    seeking: [String],
+    comment: [],
+    like: Boolean,
+    numberOfLikes: Number
   },
   {
     timestamps: true

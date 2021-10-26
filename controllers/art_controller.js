@@ -13,27 +13,34 @@ const isAuth = (req, res, next) => {
 }
 
 //create
-arts.post('/', (req, res) => {
+arts.post('/', isAuth,(req, res) => {
   Arts.create(req.body, (error, uploadedWork) => {
     res.redirect('/arts')
   })
 })
 //update
-arts.put('/:id', (req, res) => {
+arts.put('/:id',isAuth,(req, res) => {
   Arts.findByIdAndUpdate(req.params.id, req.body, (error, uploadToUpdate) => {
     res.redirect('/arts')
   })
 })
+//edit datase to add comment
+arts.post('/:id/comment',isAuth, (req, res) => {
+  Arts.findByIdAndUpdate(req.params.id, { $push: { comment: req.body.comment} }, (error, updatedComment) => {
+    res.redirect(`/arts/${req.params.id}`)
+  })
+})
+
 
 //delete 
-arts.delete('/:id', (req, res) => {
+arts.delete('/:id',isAuth, (req, res) => {
   Arts.findByIdAndRemove(req.params.id, (error, uploadToDelete) => {
     res.redirect('/arts')
   })
 })
 
 //find all
-arts.get('/', (req, res) => {
+arts.get('/',isAuth, (req, res) => {
   Arts.find({}, (error, allUploads) => {
     res.render(
       'art_index.ejs',
@@ -55,7 +62,7 @@ arts.get('/new', isAuth, (req, res) => {
 })
 
 //finding each uploaded art by id
-arts.get('/:id', (req, res) => {
+arts.get('/:id',isAuth, (req, res) => {
   Arts.findById(req.params.id, (error, foundUpload) => {
     res.render(
       'show_art.ejs',
@@ -68,7 +75,7 @@ arts.get('/:id', (req, res) => {
 })
 
 //edit upload
-arts.get('/:id/edit', (req, res) => {
+arts.get('/:id/edit',isAuth, (req, res) => {
   Arts.findById(req.params.id, (err, uploadToUpdate) => {
     res.render(
       'art_edit.ejs',
@@ -79,7 +86,6 @@ arts.get('/:id/edit', (req, res) => {
     )
   })
 })
-
 
 
 module.exports = arts

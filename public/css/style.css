@@ -312,6 +312,9 @@ h4 {
   width: 70%;
   padding: 0
 }
+.comment-id {
+  display: none;
+}
 .comment_textarea {
   width: 100%;
   padding: 8px;
@@ -322,7 +325,6 @@ h4 {
 }
 .edit_upload {
   margin: 10px 0;
-
 }
 .edit_button {
   padding: 5px 10px;
