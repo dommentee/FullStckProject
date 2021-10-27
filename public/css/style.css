@@ -201,27 +201,26 @@ input {
 }
 
 .upload_wrap {
+  padding: 10px 0;
   display: flex;
-  height: fit-content;
-  height: 100vh;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
+  float: left;
+  gap: 1.33%;
   border-top: 30px solid #666666;
   border-bottom: 30px solid #55F5AF;
 }
 .upload {
   flex-basis: 32%;
-  height: 50vh;
-  align-self: stretch;
   margin: 2% 0 0% 0; 
   padding: 10px;
   border: 2px solid #202D85;
   border-radius: 20px;
+
   float: left;
 }
 img {
-
+  height: 40vh;
 }
 .info {
   display: flex;
@@ -230,7 +229,6 @@ img {
   justify-content: space-between;
   border: 1px solid #202D85;
   border-radius: 20px;
-
 }
 
 
